@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- SEO Local Otimizado -->
+<title>Lúcio Auto Mecânica | Oficina em Criciúma - Diagnóstico e Serviço Garantido</title>
+<meta name="description" content="Oficina mecânica em Criciúma com diagnóstico preciso, transparência e serviço garantido. Troca de óleo, suspensão, motor, freios. WhatsApp rápido.">
+<meta name="keywords" content="oficina mecânica Criciúma, mecânico Rio Maina, troca de óleo Criciúma, conserto de suspensão, revisão de carro, mecânico de confiança Criciúma, Vila Zuleima, Mineira Nova, Santo Antônio">
+<meta name="author" content="Lúcio Auto Mecânica">
+<meta name="robots" content="index, follow">
+<meta name="geo.region" content="BR-SC">
+<meta name="geo.placename" content="Criciúma">
+<link rel="canonical" href="https://www.lucioautomecanica.com.br">
+
+<!-- Font Awesome para ícones profissionais -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<!-- Fontes -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: #0B0B0B;
+  color: #fff;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #C41E1E;
+  font-weight: 700;
+}
+
+p, small, li {
+  color: #D0D0D0;
+  line-height: 1.5;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.section {
+  padding: 70px 0;
+  border-bottom: 1px solid rgba(196,30,30,0.15);
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  background: #0B0B0B;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  z-index: 1000;
+  border-bottom: 1px solid #1e1e1e;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.logo-text {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+.btn-primary {
+  background: #C41E1E;
+  color: #fff;
+  box-shadow: 0 0 0 0 rgba(196,30,30,0.7);
+  animation: pulse 2s infinite;
+}
+.btn-primary:hover {
+  background: #9E1717;
+  transform: scale(1.02);
+  animation: none;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(196,30,30,0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(196,30,30,0); }
+  100% { box-shadow: 0 0 0 0 rgba(196,30,30,0); }
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background: #25D366;
+  color: #fff;
+  padding: 14px 22px;
+  border-radius: 60px;
+  text-decoration: none;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1100;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  animation: pulseWhats 2s infinite;
+}
+.whatsapp-float small {
+  font-size: 0.7rem;
+  font-weight: normal;
+}
+@keyframes pulseWhats {
+  0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); transform: scale(1);}
+  70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); transform: scale(1.02);}
+  100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); transform: scale(1);}
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: center;
+}
+.hero-content {
+  flex: 1;
+}
+.hero-image {
+  margin-top: 30px;
+  width: 100%;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 30px -12px rgba(0,0,0,0.5);
+}
+.hero-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.rating-badge {
+  background: rgba(196,30,30,0.15);
+  display: inline-block;
+  padding: 6px 14px;
+  border-radius: 40px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #C41E1E;
+  margin-bottom: 20px;
+}
+.rating-badge i {
+  margin-right: 6px;
+}
+h1 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+.hero-sub {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+.trust-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin: 28px 0;
+}
+.trust-items span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.trust-items i {
+  color: #C41E1E;
+  font-size: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 32px;
+}
+.card {
+  background: #141414;
+  padding: 28px 20px;
+  border-radius: 20px;
+  transition: 0.2s;
+  border: 1px solid #252525;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-5px);
+  border-color: #C41E1E;
+}
+.card i {
+  font-size: 2.5rem;
+  color: #C41E1E;
+  margin-bottom: 16px;
+}
+.card h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+.card p {
+  color: #A0A0A0;
+}
+
+.testimonial-card {
+  background: #141414;
+  padding: 24px;
+  border-radius: 20px;
+}
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.testimonial-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.testimonial-name {
+  font-weight: 700;
+  color: #fff;
+  font-size: 1rem;
+}
+.stars {
+  color: #f5b042;
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+}
+.stars i {
+  margin-right: 2px;
+}
+.testimonial-text {
+  color: #D0D0D0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.faq-item {
+  background: #141414;
+  border-radius: 16px;
+  margin-bottom: 16px;
+  border: 1px solid #2a2a2a;
+}
+.faq-question {
+  padding: 18px 24px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+.faq-question i:first-child {
+  color: #C41E1E;
+  margin-right: 12px;
+}
+.faq-icon {
+  color: #C41E1E;
+  transition: transform 0.3s;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+.faq-answer {
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: #B0B0B0;
+}
+.faq-item.active .faq-answer {
+  padding: 0 24px 20px 48px;
+  max-height: 280px;
+}
+
+.cta-final {
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 100%);
+  border-radius: 32px;
+  padding: 48px 32px;
+  border: 1px solid #C41E1E;
+  text-align: center;
+}
+.horario-box {
+  background: rgba(196,30,30,0.1);
+  padding: 20px;
+  border-radius: 20px;
+  margin-top: 24px;
+}
+.horario-box i {
+  margin-right: 8px;
+  color: #C41E1E;
+}
+.map-container iframe {
+  width: 100%;
+  border-radius: 20px;
+  height: 260px;
+  margin-top: 20px;
+}
+.regions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 20px 0;
+}
+.region-tag {
+  background: #1f1f1f;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  color: #C41E1E;
+}
+
+.footer {
+  background: #050505;
+  padding: 40px 0;
+  text-align: center;
+  border-top: 1px solid #1e1e1e;
+}
+.footer a {
+  color: #C41E1E;
+  text-decoration: none;
+}
+.footer i {
+  margin-right: 6px;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 100px;
+  right: 24px;
+  width: 280px;
+  background: #121212;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  z-index: 1150;
+  display: none;
+  flex-direction: column;
+  border: 1px solid #C41E1E;
+}
+.chat-header {
+  background: #C41E1E;
+  padding: 12px 16px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+.chat-header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
+.chat-body {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.chat-btn-option {
+  background: #252525;
+  border: none;
+  padding: 12px;
+  border-radius: 40px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+  text-align: left;
+}
+.chat-btn-option i {
+  margin-right: 8px;
+  color: #C41E1E;
+}
+.chat-btn-option:hover {
+  background: #C41E1E;
+}
+.chat-btn-option:hover i {
+  color: white;
+}
+.sac-btn {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  background: #C41E1E;
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 60px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1100;
+  transition: 0.2s;
+}
+.sac-btn:hover {
+  background: #9E1717;
+}
+
+@media (max-width: 768px) {
+  .container { padding: 0 20px; }
+  h1 { font-size: 1.8rem; }
+  .hero { flex-direction: column; }
+  .whatsapp-float { padding: 10px 18px; }
+  .sac-btn { padding: 12px 16px; bottom: 20px; left: 20px; }
+  .section { padding: 50px 0; }
+  .faq-item.active .faq-answer { padding: 0 16px 16px 40px; }
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="logo-area">
+    <img src="https://i.imgur.com/aOu9ALN.png" alt="Logo Lúcio Auto Mecânica" class="logo-img">
+    <div class="logo-text">Lúcio Auto Mecânica</div>
+  </div>
+  <a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20preciso%20de%20um%20or%C3%A7amento" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</header>
+
+<main>
+  <div class="container">
+    <section class="section">
+      <div class="hero">
+        <div class="hero-content">
+          <div class="rating-badge"><i class="fas fa-star"></i> ★ 4,8 (4.840 avaliações)</div>
+          <h1>Oficina Mecânica em Criciúma com Diagnóstico Preciso e Serviço Garantido</h1>
+          <p class="hero-sub">Sem surpresas, sem gambiarra. Orçamento aprovado antes de qualquer serviço. Troca de óleo, suspensão, motor, freios e muito mais.</p>
+          <div class="trust-items">
+            <span><i class="fas fa-check-circle"></i> Orçamento grátis</span>
+            <span><i class="fas fa-medal"></i> Peças de qualidade</span>
+            <span><i class="fas fa-shield-alt"></i> Garantia do serviço</span>
+          </div>
+          <a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20agendar%20um%20diagn%C3%B3stico" class="btn btn-primary" style="animation: pulse 2s infinite;"><i class="fab fa-whatsapp"></i> Falar com mecânico agora</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="https://i.imgur.com/veJ3LO7.jpeg" alt="Oficina Lúcio Auto Mecânica em Criciúma">
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><i class="fas fa-cogs"></i> Como funciona nosso serviço</h2>
+      <div class="grid">
+        <div class="card"><i class="fas fa-microscope"></i><h3>1. Diagnóstico</h3><p>Análise completa com scanner profissional e teste prático.</p></div>
+        <div class="card"><i class="fas fa-calculator"></i><h3>2. Orçamento</h3><p>Aprovação transparente antes de qualquer reparo.</p></div>
+        <div class="card"><i class="fas fa-wrench"></i><h3>3. Execução</h3><p>Serviço com garantia e entrega no prazo combinado.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><i class="fas fa-tools"></i> Serviços especializados em Criciúma</h2>
+      <div class="grid">
+        <div class="card"><i class="fas fa-oil-can"></i><h3>Troca de óleo</h3><p>Óleo de qualidade, filtro novo. Pronto em 30 min.</p></div>
+        <div class="card"><i class="fas fa-car-side"></i><h3>Suspensão</h3><p>Diagnóstico preciso, só paga o necessário.</p></div>
+        <div class="card"><i class="fas fa-industry"></i><h3>Motor e câmbio</h3><p>Grandes reparos com garantia e teste final.</p></div>
+        <div class="card"><i class="fas fa-brake-warning"></i><h3>Freios e elétrica</h3><p>Segurança máxima, componentes originais.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><i class="fas fa-star"></i> O que nossos clientes dizem</h2>
+      <div class="grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.imgur.com/SaVgt6B.png" alt="Claudio Marques" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">Claudio Marques</div>
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </div>
+          <div class="testimonial-text">"Mecânica nota dez, equipe de profissionais muito bem qualificados e o preço justo, o carro ficou perfeito. Super indico, vale a pena levar o carro na mecânica do Lúcio."</div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.imgur.com/FM71Hlk.png" alt="Rodrigo Melo" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">Rodrigo Melo</div>
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </div>
+          <div class="testimonial-text">"Mecânica especializada top da linha… Sempre me atendeu prontamente, com qualidade e preços justos!!! Precisando, chama na Lúcio auto mecânica que é sucesso!!!"</div>
+        </div>
+        
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <img src="https://i.imgur.com/VxJoGY6.png" alt="Angelo Marcos Mariotti" class="testimonial-avatar">
+            <div>
+              <div class="testimonial-name">Angelo Marcos Mariotti</div>
+              <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+            </div>
+          </div>
+          <div class="testimonial-text">"Show!! Serviço de qualidade, com certeza irei mais vezes!!"</div>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:32px">
+        <a href="https://maps.google.com/?q=Lúcio+Auto+Mecânica+Criciúma" target="_blank" style="color:#C41E1E;"><i class="fab fa-google"></i> Ver todas as 4.840 avaliações no Google →</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2><i class="fas fa-question-circle"></i> Dúvidas frequentes</h2>
+      <div class="faq-list">
+        <div class="faq-item"><div class="faq-question"><span><i class="fas fa-comment"></i> Já levei em outra oficina e não resolveram. Por que com vocês seria diferente?</span><i class="fas fa-chevron-down faq-icon"></i></div><div class="faq-answer">Porque a Lúcio tem mais de 4.800 avaliações reais de Criciúma. Diagnóstico com equipamento profissional e só executamos com sua aprovação.</div></div>
+        <div class="faq-item"><div class="faq-question"><span><i class="fas fa-car"></i> Vocês atendem carro antigo ou importado?</span><i class="fas fa-chevron-down faq-icon"></i></div><div class="faq-answer">Sim. Atendemos todas as marcas, desde populares a importados. Avaliamos peças e avisamos antes da execução.</div></div>
+        <div class="faq-item"><div class="faq-question"><span><i class="fas fa-clock"></i> Tem horário de almoço? Como fica?</span><i class="fas fa-chevron-down faq-icon"></i></div><div class="faq-answer">Fechamos das 12h às 13h30 para descanso da equipe. Você pode deixar o carro pela manhã e buscar às 18h, ou agendar para outro dia.</div></div>
+        <div class="faq-item"><div class="faq-question"><span><i class="fas fa-file-invoice"></i> Emitem nota fiscal?</span><i class="fas fa-chevron-down faq-icon"></i></div><div class="faq-answer">Sim, emitimos NF para todos os serviços realizados.</div></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="cta-final">
+        <h2 style="color: #C41E1E;"><i class="fas fa-bolt"></i> Precisa resolver seu carro hoje?</h2>
+        <p style="margin: 16px 0;">Fale direto com a oficina no WhatsApp e agende seu horário ainda hoje.</p>
+        <a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20quero%20agendar%20um%20servi%C3%A7o%20urgente" class="btn btn-primary" style="background:#C41E1E; animation: pulse 2s infinite;"><i class="fab fa-whatsapp"></i> FALE AGORA NO WHATSAPP</a>
+        <div class="horario-box">
+          <strong><i class="far fa-clock"></i> Horário de funcionamento:</strong><br>
+          Segunda a Sexta: 8h às 12h | 13h30 às 18h<br>
+          <small>⚠️ Atendimento com agendamento prévio.</small>
+        </div>
+        <div class="map-container">
+          <iframe src="https://maps.google.com/maps?q=Rua%20Alina%20Alexandrina%20Mateus%2C%20157%2C%20Rio%20Maina%2C%20Crici%C3%BAma%20-%20SC%2C%2088817-643&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
+          <p style="margin-top: 12px;"><i class="fas fa-map-marker-alt"></i> Rua Alina Alexandrina Mateus, 157 - Rio Maina, Criciúma - SC</p>
+        </div>
+        <div>
+          <strong><i class="fas fa-globe"></i> Regiões que atendemos em Criciúma:</strong>
+          <div class="regions">
+            <span class="region-tag">Rio Maina</span>
+            <span class="region-tag">Próspera</span>
+            <span class="region-tag">Santa Bárbara</span>
+            <span class="region-tag">Centro</span>
+            <span class="region-tag">Pinheirinho</span>
+            <span class="region-tag">Vila Zuleima</span>
+            <span class="region-tag">Mineira Nova</span>
+            <span class="region-tag">Santo Antônio</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    <p><i class="fas fa-phone-alt"></i> Telefone: (48) 99916-1977 | <i class="fab fa-whatsapp"></i> WhatsApp: (48) 99916-1977</p>
+    <p><i class="fas fa-map-marker-alt"></i> Rua Alina Alexandrina Mateus, 157 - Rio Maina, Criciúma - SC | 88817-643</p>
+    <p><i class="far fa-clock"></i> Seg–Sex: 8h–12h / 13h30–18h</p>
+    <p style="margin-top: 20px;">© 2026 Lúcio Auto Mecânica – Confiança e transparência em Criciúma.</p>
+  </div>
+</footer>
+
+<a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20preciso%20de%20um%20or%C3%A7amento" class="whatsapp-float" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i> NOSSO WHATSAPP <small>Resposta rápida</small>
+</a>
+
+<button class="sac-btn" id="sacBtn"><i class="fas fa-headset"></i> SAC - Tire dúvidas</button>
+
+<div class="chatbot-container" id="chatbotContainer">
+  <div class="chat-header">
+    <span><i class="fas fa-tools"></i> Atendimento Lúcio</span>
+    <button id="closeChat">&times;</button>
+  </div>
+  <div class="chat-body">
+    <p>Olá! Como podemos ajudar?</p>
+    <button class="chat-btn-option" data-msg="troca de óleo"><i class="fas fa-oil-can"></i> Troca de óleo</button>
+    <button class="chat-btn-option" data-msg="suspensão"><i class="fas fa-car-side"></i> Suspensão</button>
+    <button class="chat-btn-option" data-msg="motor ou câmbio"><i class="fas fa-industry"></i> Motor / Câmbio</button>
+    <button class="chat-btn-option" data-msg="freios e elétrica"><i class="fas fa-brake-warning"></i> Freios / Elétrica</button>
+    <button class="chat-btn-option" data-msg="orçamento"><i class="fas fa-calculator"></i> Orçamento grátis</button>
+    <button class="chat-btn-option" data-msg="horário de funcionamento"><i class="far fa-clock"></i> Horário de funcionamento</button>
+  </div>
+</div>
+
+<script>
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    question.addEventListener('click', () => {
+      const isActive = item.classList.contains('active');
+      faqItems.forEach(i => i.classList.remove('active'));
+      if (!isActive) item.classList.add('active');
+    });
+  });
+
+  const sacBtn = document.getElementById('sacBtn');
+  const chatContainer = document.getElementById('chatbotContainer');
+  const closeChat = document.getElementById('closeChat');
+
+  function toggleChat() {
+    if (chatContainer.style.display === 'flex') {
+      chatContainer.style.display = 'none';
+    } else {
+      chatContainer.style.display = 'flex';
+    }
+  }
+
+  sacBtn.addEventListener('click', toggleChat);
+  closeChat.addEventListener('click', () => {
+    chatContainer.style.display = 'none';
+  });
+
+  const chatOptions = document.querySelectorAll('.chat-btn-option');
+  chatOptions.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const msg = btn.getAttribute('data-msg');
+      let textMsg = '';
+      if (msg === 'troca de óleo') textMsg = 'Preciso de troca de óleo no meu carro. Qual valor e horário?';
+      else if (msg === 'suspensão') textMsg = 'Meu carro está com problema na suspensão. Gostaria de um diagnóstico.';
+      else if (msg === 'motor ou câmbio') textMsg = 'Estou com problema no motor/câmbio. Preciso de avaliação.';
+      else if (msg === 'freios e elétrica') textMsg = 'Quero revisar freios e sistema elétrico.';
+      else if (msg === 'orçamento') textMsg = 'Gostaria de um orçamento sem compromisso para meu veículo.';
+      else if (msg === 'horário de funcionamento') textMsg = 'Qual o horário de funcionamento de vocês?';
+      else textMsg = `Preciso de ajuda com ${msg}`;
+      
+      window.open(`https://wa.me/5548999161977?text=${encodeURIComponent(textMsg)}`, '_blank');
+      chatContainer.style.display = 'none';
+    });
+  });
+</script>
+</body>
+</html>
