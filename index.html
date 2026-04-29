@@ -113,39 +113,56 @@ p, small, li {
   100% { box-shadow: 0 0 0 0 rgba(196,30,30,0); }
 }
 
+/* Botão WhatsApp flutuante - posição direita inferior */
 .whatsapp-float {
   position: fixed;
   bottom: 24px;
   right: 24px;
   background: #25D366;
   color: #fff;
-  padding: 14px 22px;
   border-radius: 60px;
   text-decoration: none;
-  font-weight: 700;
-  font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0;
   z-index: 1100;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   animation: pulseWhats 2s infinite;
   width: 56px;
   height: 56px;
-  padding: 14px;
 }
 .whatsapp-float i {
-  font-size: 1.5rem;
-  margin: 0;
-}
-.whatsapp-float small {
-  display: none;
+  font-size: 1.8rem;
 }
 @keyframes pulseWhats {
   0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); transform: scale(1);}
   70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); transform: scale(1.02);}
   100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); transform: scale(1);}
+}
+
+/* Botão SAC - posição abaixo do WhatsApp (direita inferior) */
+.sac-btn {
+  position: fixed;
+  bottom: 96px;
+  right: 24px;
+  background: #C41E1E;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 60px;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 1100;
+  transition: 0.2s;
+  font-size: 0.85rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+.sac-btn:hover {
+  background: #9E1717;
 }
 
 .hero {
@@ -218,36 +235,67 @@ h1 {
   font-size: 1rem;
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
+/* Layout reorganizado - 2 colunas agrupadas */
+.services-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
   margin-top: 32px;
 }
-.card {
-  background: #141414;
-  padding: 28px 20px;
-  border-radius: 20px;
-  transition: 0.2s;
-  border: 1px solid #252525;
-  text-align: center;
+.services-column {
+  flex: 1;
+  background: #0f0f0f;
+  border-radius: 28px;
+  padding: 32px;
+  border: 1px solid #1f1f1f;
 }
-.card:hover {
-  transform: translateY(-5px);
-  border-color: #C41E1E;
-}
-.card i {
-  font-size: 2.5rem;
+.services-column h3 {
   color: #C41E1E;
-  margin-bottom: 16px;
+  font-size: 1.5rem;
+  margin-bottom: 28px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #252525;
 }
-.card h3 {
-  margin-bottom: 12px;
-  font-size: 1.4rem;
-  color: #fff;
+.service-step {
+  margin-bottom: 32px;
 }
-.card p {
-  color: #A0A0A0;
+.service-step .step-title {
+  color: #FFFFFF;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.service-step .step-title i {
+  color: #C41E1E;
+  font-size: 1.3rem;
+}
+.service-step p {
+  color: #B0B0B0;
+  margin-left: 30px;
+  line-height: 1.5;
+}
+.specialty-item {
+  margin-bottom: 28px;
+}
+.specialty-item .specialty-title {
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.specialty-item .specialty-title i {
+  color: #C41E1E;
+  width: 24px;
+}
+.specialty-item p {
+  color: #B0B0B0;
+  margin-left: 34px;
 }
 
 /* Seção Quem Sou Eu */
@@ -450,7 +498,7 @@ h1 {
 
 .chatbot-container {
   position: fixed;
-  bottom: 100px;
+  bottom: 170px;
   right: 24px;
   width: 280px;
   background: #121212;
@@ -469,6 +517,7 @@ h1 {
   justify-content: space-between;
   align-items: center;
   color: white;
+  border-radius: 20px 20px 0 0;
 }
 .chat-header button {
   background: none;
@@ -504,42 +553,24 @@ h1 {
 .chat-btn-option:hover i {
   color: white;
 }
-.sac-btn {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  background: #C41E1E;
-  color: white;
-  border: none;
-  padding: 14px 20px;
-  border-radius: 60px;
-  cursor: pointer;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  z-index: 1100;
-  transition: 0.2s;
-}
-.sac-btn:hover {
-  background: #9E1717;
-}
 
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
   h1 { font-size: 1.8rem; }
   .hero-subtitle { font-size: 0.9rem; }
   .hero { flex-direction: column; }
-  .whatsapp-float { width: 48px; height: 48px; padding: 12px; }
-  .whatsapp-float i { font-size: 1.3rem; }
-  .sac-btn { padding: 12px 16px; bottom: 20px; left: 20px; }
+  .whatsapp-float { width: 48px; height: 48px; bottom: 20px; right: 20px; }
+  .whatsapp-float i { font-size: 1.5rem; }
+  .sac-btn { bottom: 88px; right: 20px; padding: 10px 14px; font-size: 0.75rem; }
   .section { padding: 50px 0; }
+  .services-wrapper { flex-direction: column; gap: 30px; }
+  .services-column { padding: 24px; }
   .faq-item.active .faq-answer { padding: 0 16px 16px 40px; }
   .about-content { flex-direction: column; text-align: center; gap: 30px; }
   .about-image { justify-content: center; }
   .about-image img { width: 200px; height: 200px; }
   .about-text h2, .about-text h3, .about-text p { text-align: center; }
+  .chatbot-container { bottom: 160px; right: 16px; width: 260px; }
 }
 </style>
 </head>
@@ -555,14 +586,14 @@ h1 {
 
 <main>
   <div class="container">
-    <!-- Hero Section com título modificado e subtítulo -->
+    <!-- Hero Section -->
     <section class="section">
       <div class="hero">
         <div class="hero-content">
           <div class="rating-badge"><i class="fas fa-star"></i> ★ 4,8 (4.840 avaliações)</div>
           <h1>Oficina Mecânica em Criciúma</h1>
           <div class="hero-subtitle">Diagnóstico Preciso e Serviço Garantido</div>
-          <p class="hero-description">Sem surpresas, sem gambiarra. Orçamento aprovado antes de qualquer serviço. Troca de óleo, suspensão, motor, freios e muito mais.</p>
+          <p class="hero-description">Sem surpresas, sem enrolação. Orçamento aprovado antes de qualquer serviço. Troca de óleo, suspensão, motor, freios e muito mais.</p>
           <div class="trust-items">
             <span><i class="fas fa-check-circle"></i> Orçamento grátis</span>
             <span><i class="fas fa-medal"></i> Peças de qualidade</span>
@@ -576,28 +607,50 @@ h1 {
       </div>
     </section>
 
-    <!-- Como funciona nosso serviço -->
+    <!-- Layout reorganizado: Como funciona + Serviços em 2 colunas -->
     <section class="section">
-      <h2><i class="fas fa-cogs"></i> Como funciona nosso serviço</h2>
-      <div class="grid">
-        <div class="card"><i class="fas fa-microscope"></i><h3>1. Diagnóstico</h3><p>Análise completa com scanner profissional e teste prático.</p></div>
-        <div class="card"><i class="fas fa-calculator"></i><h3>2. Orçamento</h3><p>Aprovação transparente antes de qualquer reparo.</p></div>
-        <div class="card"><i class="fas fa-wrench"></i><h3>3. Execução</h3><p>Serviço com garantia e entrega no prazo combinado.</p></div>
+      <div class="services-wrapper">
+        <!-- Coluna 1: Como funciona nosso serviço -->
+        <div class="services-column">
+          <h3><i class="fas fa-cogs"></i> Como funciona</h3>
+          <div class="service-step">
+            <div class="step-title"><i class="fas fa-microscope"></i> 1. Diagnóstico</div>
+            <p>Análise completa com scanner profissional e teste prático.</p>
+          </div>
+          <div class="service-step">
+            <div class="step-title"><i class="fas fa-calculator"></i> 2. Orçamento</div>
+            <p>Aprovação transparente antes de qualquer reparo.</p>
+          </div>
+          <div class="service-step">
+            <div class="step-title"><i class="fas fa-wrench"></i> 3. Execução</div>
+            <p>Serviço com garantia e entrega no prazo combinado.</p>
+          </div>
+        </div>
+
+        <!-- Coluna 2: Serviços especializados -->
+        <div class="services-column">
+          <h3><i class="fas fa-tools"></i> Serviços</h3>
+          <div class="specialty-item">
+            <div class="specialty-title"><i class="fas fa-oil-can"></i> Troca de óleo</div>
+            <p>Óleo de qualidade, filtro novo. Pronto em 30 min.</p>
+          </div>
+          <div class="specialty-item">
+            <div class="specialty-title"><i class="fas fa-car-side"></i> Suspensão</div>
+            <p>Diagnóstico preciso, só paga o necessário.</p>
+          </div>
+          <div class="specialty-item">
+            <div class="specialty-title"><i class="fas fa-industry"></i> Motor e câmbio</div>
+            <p>Grandes reparos com garantia e teste final.</p>
+          </div>
+          <div class="specialty-item">
+            <div class="specialty-title"><i class="fas fa-car"></i> Freios e elétrica</div>
+            <p>Segurança máxima, componentes originais.</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Serviços especializados em Criciúma -->
-    <section class="section">
-      <h2><i class="fas fa-tools"></i> Serviços especializados em Criciúma</h2>
-      <div class="grid">
-        <div class="card"><i class="fas fa-oil-can"></i><h3>Troca de óleo</h3><p>Óleo de qualidade, filtro novo. Pronto em 30 min.</p></div>
-        <div class="card"><i class="fas fa-car-side"></i><h3>Suspensão</h3><p>Diagnóstico preciso, só paga o necessário.</p></div>
-        <div class="card"><i class="fas fa-industry"></i><h3>Motor e câmbio</h3><p>Grandes reparos com garantia e teste final.</p></div>
-        <div class="card"><i class="fas fa-car"></i><h3>Freios e elétrica</h3><p>Segurança máxima, componentes originais.</p></div>
-      </div>
-    </section>
-
-    <!-- Quem Sou Eu - com mais de 18 anos de experiência -->
+    <!-- Quem Sou Eu -->
     <section class="section about-section">
       <div class="about-content">
         <div class="about-image">
@@ -611,7 +664,7 @@ h1 {
       </div>
     </section>
 
-    <!-- Nossa História com Vídeo atualizado -->
+    <!-- Nossa História com Vídeo -->
     <section class="section video-section">
       <h2><i class="fas fa-video"></i> Nossa História</h2>
       <div class="video-wrapper">
@@ -623,7 +676,7 @@ h1 {
     <!-- Depoimentos -->
     <section class="section">
       <h2><i class="fas fa-star"></i> O que nossos clientes dizem</h2>
-      <div class="grid">
+      <div class="grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 28px;">
         <div class="testimonial-card">
           <div class="testimonial-header">
             <img src="https://i.imgur.com/SaVgt6B.png" alt="Claudio Marques" class="testimonial-avatar">
@@ -711,15 +764,16 @@ h1 {
     <p><i class="fas fa-phone-alt"></i> Telefone: (48) 99916-1977 | <i class="fab fa-whatsapp"></i> WhatsApp: (48) 99916-1977</p>
     <p><i class="fas fa-map-marker-alt"></i> Rua Alina Alexandrina Mateus, 157 - Rio Maina, Criciúma - SC | 88817-643</p>
     <p><i class="far fa-clock"></i> Seg–Sex: 8h–12h / 13h30–18h</p>
-    <p style="margin-top: 20px;">© 2026 Lúcio Auto Mecânica. Todos os direitos reservados. Conteúdo protegido por direitos autorais e propriedade intelectual. Uso não autorizado poderá resultar em medidas legais.</p>
+    <p style="margin-top: 20px;">© 2026 Lúcio Auto Mecânica. Todos os direitos reservados. Conteúdo protegido por direitos autorais e propriedade intelectual.</p>
   </div>
 </footer>
 
-<!-- Botão WhatsApp flutuante - APENAS ÍCONE -->
+<!-- Botão WhatsApp flutuante -->
 <a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20vi%20o%20whatsapp%20no%20site%20da%20L%C3%BAcio%20Auto%20Mec%C3%A2nica%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo." class="whatsapp-float" target="_blank" rel="noopener">
   <i class="fab fa-whatsapp"></i>
 </a>
 
+<!-- Botão SAC acima do WhatsApp -->
 <button class="sac-btn" id="sacBtn"><i class="fas fa-headset"></i> SAC - Tire dúvidas</button>
 
 <div class="chatbot-container" id="chatbotContainer">
