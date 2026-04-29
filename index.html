@@ -185,12 +185,20 @@ p, small, li {
 h1 {
   font-size: 2.5rem;
   line-height: 1.2;
-  margin-bottom: 20px;
+  margin-bottom: 8px;
   color: #C41E1E;
 }
-.hero-sub {
+.hero-subtitle {
   font-size: 1.1rem;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-family: 'Open Sans', sans-serif;
+}
+.hero-description {
+  font-size: 1rem;
   margin-bottom: 30px;
+  color: #D0D0D0;
 }
 .trust-items {
   display: flex;
@@ -521,6 +529,7 @@ h1 {
 @media (max-width: 768px) {
   .container { padding: 0 20px; }
   h1 { font-size: 1.8rem; }
+  .hero-subtitle { font-size: 0.9rem; }
   .hero { flex-direction: column; }
   .whatsapp-float { width: 48px; height: 48px; padding: 12px; }
   .whatsapp-float i { font-size: 1.3rem; }
@@ -546,13 +555,14 @@ h1 {
 
 <main>
   <div class="container">
-    <!-- Hero Section -->
+    <!-- Hero Section com título modificado e subtítulo -->
     <section class="section">
       <div class="hero">
         <div class="hero-content">
           <div class="rating-badge"><i class="fas fa-star"></i> ★ 4,8 (4.840 avaliações)</div>
-          <h1>Oficina Mecânica em Criciúma com Diagnóstico Preciso e Serviço Garantido</h1>
-          <p class="hero-sub">Sem surpresas, sem gambiarra. Orçamento aprovado antes de qualquer serviço. Troca de óleo, suspensão, motor, freios e muito mais.</p>
+          <h1>Oficina Mecânica em Criciúma</h1>
+          <div class="hero-subtitle">Diagnóstico Preciso e Serviço Garantido</div>
+          <p class="hero-description">Sem surpresas, sem gambiarra. Orçamento aprovado antes de qualquer serviço. Troca de óleo, suspensão, motor, freios e muito mais.</p>
           <div class="trust-items">
             <span><i class="fas fa-check-circle"></i> Orçamento grátis</span>
             <span><i class="fas fa-medal"></i> Peças de qualidade</span>
@@ -583,11 +593,11 @@ h1 {
         <div class="card"><i class="fas fa-oil-can"></i><h3>Troca de óleo</h3><p>Óleo de qualidade, filtro novo. Pronto em 30 min.</p></div>
         <div class="card"><i class="fas fa-car-side"></i><h3>Suspensão</h3><p>Diagnóstico preciso, só paga o necessário.</p></div>
         <div class="card"><i class="fas fa-industry"></i><h3>Motor e câmbio</h3><p>Grandes reparos com garantia e teste final.</p></div>
-        <div class="card"><i class="fas fa-brake-warning"></i><h3>Freios e elétrica</h3><p>Segurança máxima, componentes originais.</p></div>
+        <div class="card"><i class="fas fa-car"></i><h3>Freios e elétrica</h3><p>Segurança máxima, componentes originais.</p></div>
       </div>
     </section>
 
-    <!-- Quem Sou Eu -->
+    <!-- Quem Sou Eu - com mais de 18 anos de experiência -->
     <section class="section about-section">
       <div class="about-content">
         <div class="about-image">
@@ -596,12 +606,12 @@ h1 {
         <div class="about-text">
           <h2>Quem Sou Eu</h2>
           <h3>Lúcio Mauro Goulart Freitas</h3>
-          <p>Apaixonado por carros e com mais de 10 anos de experiência no mercado. Sempre prezando por transparência e honestidade na execução dos nossos serviços. Meu compromisso é oferecer um atendimento justo, diagnóstico preciso e soluções eficientes para que seu veículo volte à estrada com segurança e confiança.</p>
+          <p>Apaixonado por carros e com mais de 18 anos de experiência no mercado. Sempre prezando por transparência e honestidade na execução dos nossos serviços. Meu compromisso é oferecer um atendimento justo, diagnóstico preciso e soluções eficientes para que seu veículo volte à estrada com segurança e confiança.</p>
         </div>
       </div>
     </section>
 
-    <!-- Nossa História com Vídeo -->
+    <!-- Nossa História com Vídeo atualizado -->
     <section class="section video-section">
       <h2><i class="fas fa-video"></i> Nossa História</h2>
       <div class="video-wrapper">
