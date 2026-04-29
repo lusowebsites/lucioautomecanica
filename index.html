@@ -14,7 +14,7 @@
 <meta name="geo.placename" content="Criciúma">
 <link rel="canonical" href="https://www.lucioautomecanica.com.br">
 
-<!-- Font Awesome para ícones profissionais -->
+<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <!-- Fontes -->
@@ -35,7 +35,6 @@ body {
 
 h1, h2, h3 {
   font-family: 'Montserrat', sans-serif;
-  color: #C41E1E;
   font-weight: 700;
 }
 
@@ -127,14 +126,21 @@ p, small, li {
   font-family: 'Montserrat', sans-serif;
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: center;
+  gap: 0;
   z-index: 1100;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
   animation: pulseWhats 2s infinite;
+  width: 56px;
+  height: 56px;
+  padding: 14px;
+}
+.whatsapp-float i {
+  font-size: 1.5rem;
+  margin: 0;
 }
 .whatsapp-float small {
-  font-size: 0.7rem;
-  font-weight: normal;
+  display: none;
 }
 @keyframes pulseWhats {
   0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.6); transform: scale(1);}
@@ -180,6 +186,7 @@ h1 {
   font-size: 2.5rem;
   line-height: 1.2;
   margin-bottom: 20px;
+  color: #C41E1E;
 }
 .hero-sub {
   font-size: 1.1rem;
@@ -229,9 +236,82 @@ h1 {
 .card h3 {
   margin-bottom: 12px;
   font-size: 1.4rem;
+  color: #fff;
 }
 .card p {
   color: #A0A0A0;
+}
+
+/* Seção Quem Sou Eu */
+.about-section {
+  background: #0f0f0f;
+  border-radius: 24px;
+  margin: 20px 0;
+}
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  align-items: center;
+  flex-direction: row;
+}
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+.about-image img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #C41E1E;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.about-text {
+  flex: 2;
+}
+.about-text h2 {
+  color: #C41E1E;
+  font-size: 2rem;
+  margin-bottom: 16px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+.about-text h3 {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+}
+.about-text p {
+  color: #FFFFFF;
+  font-size: 1rem;
+  line-height: 1.8;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+}
+
+/* Video section */
+.video-section {
+  background: #0a0a0a;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 20px;
+}
+.video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .testimonial-card {
@@ -442,10 +522,15 @@ h1 {
   .container { padding: 0 20px; }
   h1 { font-size: 1.8rem; }
   .hero { flex-direction: column; }
-  .whatsapp-float { padding: 10px 18px; }
+  .whatsapp-float { width: 48px; height: 48px; padding: 12px; }
+  .whatsapp-float i { font-size: 1.3rem; }
   .sac-btn { padding: 12px 16px; bottom: 20px; left: 20px; }
   .section { padding: 50px 0; }
   .faq-item.active .faq-answer { padding: 0 16px 16px 40px; }
+  .about-content { flex-direction: column; text-align: center; gap: 30px; }
+  .about-image { justify-content: center; }
+  .about-image img { width: 200px; height: 200px; }
+  .about-text h2, .about-text h3, .about-text p { text-align: center; }
 }
 </style>
 </head>
@@ -456,11 +541,12 @@ h1 {
     <img src="https://i.imgur.com/aOu9ALN.png" alt="Logo Lúcio Auto Mecânica" class="logo-img">
     <div class="logo-text">Lúcio Auto Mecânica</div>
   </div>
-  <a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20vim%20pelo%20site%20e%20preciso%20de%20um%20or%C3%A7amento" class="btn btn-primary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+  <a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20vi%20o%20site%20da%20L%C3%BAcio%20Auto%20Mec%C3%A2nica%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo." class="btn btn-primary" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> WhatsApp</a>
 </header>
 
 <main>
   <div class="container">
+    <!-- Hero Section -->
     <section class="section">
       <div class="hero">
         <div class="hero-content">
@@ -472,7 +558,7 @@ h1 {
             <span><i class="fas fa-medal"></i> Peças de qualidade</span>
             <span><i class="fas fa-shield-alt"></i> Garantia do serviço</span>
           </div>
-          <a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20quero%20agendar%20um%20diagn%C3%B3stico" class="btn btn-primary" style="animation: pulse 2s infinite;"><i class="fab fa-whatsapp"></i> Falar com mecânico agora</a>
+          <a href="https://wa.me/5548999161977?text=Ol%C3%A1%20encontrei%20o%20Whatsapp%20no%20site%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="btn btn-primary" style="animation: pulse 2s infinite;" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Falar com mecânico agora</a>
         </div>
       </div>
       <div class="hero-image">
@@ -480,6 +566,7 @@ h1 {
       </div>
     </section>
 
+    <!-- Como funciona nosso serviço -->
     <section class="section">
       <h2><i class="fas fa-cogs"></i> Como funciona nosso serviço</h2>
       <div class="grid">
@@ -489,6 +576,7 @@ h1 {
       </div>
     </section>
 
+    <!-- Serviços especializados em Criciúma -->
     <section class="section">
       <h2><i class="fas fa-tools"></i> Serviços especializados em Criciúma</h2>
       <div class="grid">
@@ -499,6 +587,30 @@ h1 {
       </div>
     </section>
 
+    <!-- Quem Sou Eu -->
+    <section class="section about-section">
+      <div class="about-content">
+        <div class="about-image">
+          <img src="https://i.imgur.com/cuRLWIV.jpeg" alt="Lúcio Mauro Goulart Freitas">
+        </div>
+        <div class="about-text">
+          <h2>Quem Sou Eu</h2>
+          <h3>Lúcio Mauro Goulart Freitas</h3>
+          <p>Apaixonado por carros e com mais de 10 anos de experiência no mercado. Sempre prezando por transparência e honestidade na execução dos nossos serviços. Meu compromisso é oferecer um atendimento justo, diagnóstico preciso e soluções eficientes para que seu veículo volte à estrada com segurança e confiança.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nossa História com Vídeo -->
+    <section class="section video-section">
+      <h2><i class="fas fa-video"></i> Nossa História</h2>
+      <div class="video-wrapper">
+        <iframe src="https://player.vimeo.com/video/1187790481?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" referrerpolicy="strict-origin-when-cross-origin" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Nossa História"></iframe>
+      </div>
+      <script src="https://player.vimeo.com/api/player.js"></script>
+    </section>
+
+    <!-- Depoimentos -->
     <section class="section">
       <h2><i class="fas fa-star"></i> O que nossos clientes dizem</h2>
       <div class="grid">
@@ -540,6 +652,7 @@ h1 {
       </div>
     </section>
 
+    <!-- FAQ -->
     <section class="section">
       <h2><i class="fas fa-question-circle"></i> Dúvidas frequentes</h2>
       <div class="faq-list">
@@ -550,15 +663,16 @@ h1 {
       </div>
     </section>
 
+    <!-- CTA Final -->
     <section class="section">
       <div class="cta-final">
         <h2 style="color: #C41E1E;"><i class="fas fa-bolt"></i> Precisa resolver seu carro hoje?</h2>
         <p style="margin: 16px 0;">Fale direto com a oficina no WhatsApp e agende seu horário ainda hoje.</p>
-        <a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20quero%20agendar%20um%20servi%C3%A7o%20urgente" class="btn btn-primary" style="background:#C41E1E; animation: pulse 2s infinite;"><i class="fab fa-whatsapp"></i> FALE AGORA NO WHATSAPP</a>
+        <a href="https://wa.me/5548999161977?text=Ol%C3%A1%20encontrei%20o%20Whatsapp%20no%20site%2C%20gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o." class="btn btn-primary" style="background:#C41E1E; animation: pulse 2s infinite;" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> FALE AGORA NO WHATSAPP</a>
         <div class="horario-box">
           <strong><i class="far fa-clock"></i> Horário de funcionamento:</strong><br>
           Segunda a Sexta: 8h às 12h | 13h30 às 18h<br>
-          <small>⚠️ Atendimento com agendamento prévio.</small>
+          <small>Confiança e transparência é o que nos define</small>
         </div>
         <div class="map-container">
           <iframe src="https://maps.google.com/maps?q=Rua%20Alina%20Alexandrina%20Mateus%2C%20157%2C%20Rio%20Maina%2C%20Crici%C3%BAma%20-%20SC%2C%2088817-643&t=&z=15&ie=UTF8&iwloc=&output=embed" allowfullscreen="" loading="lazy"></iframe>
@@ -587,12 +701,13 @@ h1 {
     <p><i class="fas fa-phone-alt"></i> Telefone: (48) 99916-1977 | <i class="fab fa-whatsapp"></i> WhatsApp: (48) 99916-1977</p>
     <p><i class="fas fa-map-marker-alt"></i> Rua Alina Alexandrina Mateus, 157 - Rio Maina, Criciúma - SC | 88817-643</p>
     <p><i class="far fa-clock"></i> Seg–Sex: 8h–12h / 13h30–18h</p>
-    <p style="margin-top: 20px;">© 2026 Lúcio Auto Mecânica – Confiança e transparência em Criciúma.</p>
+    <p style="margin-top: 20px;">© 2026 Lúcio Auto Mecânica. Todos os direitos reservados. Conteúdo protegido por direitos autorais e propriedade intelectual. Uso não autorizado poderá resultar em medidas legais.</p>
   </div>
 </footer>
 
-<a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20vim%20do%20site%20e%20preciso%20de%20um%20or%C3%A7amento" class="whatsapp-float" target="_blank" rel="noopener">
-  <i class="fab fa-whatsapp"></i> NOSSO WHATSAPP <small>Resposta rápida</small>
+<!-- Botão WhatsApp flutuante - APENAS ÍCONE -->
+<a href="https://wa.me/5548999161977?text=Ol%C3%A1%2C%20vi%20o%20whatsapp%20no%20site%20da%20L%C3%BAcio%20Auto%20Mec%C3%A2nica%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20para%20meu%20ve%C3%ADculo." class="whatsapp-float" target="_blank" rel="noopener">
+  <i class="fab fa-whatsapp"></i>
 </a>
 
 <button class="sac-btn" id="sacBtn"><i class="fas fa-headset"></i> SAC - Tire dúvidas</button>
@@ -607,13 +722,14 @@ h1 {
     <button class="chat-btn-option" data-msg="troca de óleo"><i class="fas fa-oil-can"></i> Troca de óleo</button>
     <button class="chat-btn-option" data-msg="suspensão"><i class="fas fa-car-side"></i> Suspensão</button>
     <button class="chat-btn-option" data-msg="motor ou câmbio"><i class="fas fa-industry"></i> Motor / Câmbio</button>
-    <button class="chat-btn-option" data-msg="freios e elétrica"><i class="fas fa-brake-warning"></i> Freios / Elétrica</button>
+    <button class="chat-btn-option" data-msg="freios e elétrica"><i class="fas fa-car"></i> Freios / Elétrica</button>
     <button class="chat-btn-option" data-msg="orçamento"><i class="fas fa-calculator"></i> Orçamento grátis</button>
-    <button class="chat-btn-option" data-msg="horário de funcionamento"><i class="far fa-clock"></i> Horário de funcionamento</button>
+    <button class="chat-btn-option" id="horarioBtn"><i class="far fa-clock"></i> Horário de funcionamento</button>
   </div>
 </div>
 
 <script>
+  // FAQ Accordion
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     const question = item.querySelector('.faq-question');
@@ -624,6 +740,7 @@ h1 {
     });
   });
 
+  // SAC Chatbot toggle
   const sacBtn = document.getElementById('sacBtn');
   const chatContainer = document.getElementById('chatbotContainer');
   const closeChat = document.getElementById('closeChat');
@@ -641,22 +758,31 @@ h1 {
     chatContainer.style.display = 'none';
   });
 
+  // Botões de serviço do chat (exceto horário)
   const chatOptions = document.querySelectorAll('.chat-btn-option');
   chatOptions.forEach(btn => {
-    btn.addEventListener('click', () => {
-      const msg = btn.getAttribute('data-msg');
-      let textMsg = '';
-      if (msg === 'troca de óleo') textMsg = 'Preciso de troca de óleo no meu carro. Qual valor e horário?';
-      else if (msg === 'suspensão') textMsg = 'Meu carro está com problema na suspensão. Gostaria de um diagnóstico.';
-      else if (msg === 'motor ou câmbio') textMsg = 'Estou com problema no motor/câmbio. Preciso de avaliação.';
-      else if (msg === 'freios e elétrica') textMsg = 'Quero revisar freios e sistema elétrico.';
-      else if (msg === 'orçamento') textMsg = 'Gostaria de um orçamento sem compromisso para meu veículo.';
-      else if (msg === 'horário de funcionamento') textMsg = 'Qual o horário de funcionamento de vocês?';
-      else textMsg = `Preciso de ajuda com ${msg}`;
-      
-      window.open(`https://wa.me/5548999161977?text=${encodeURIComponent(textMsg)}`, '_blank');
-      chatContainer.style.display = 'none';
-    });
+    if (btn.id !== 'horarioBtn') {
+      btn.addEventListener('click', () => {
+        const msg = btn.getAttribute('data-msg');
+        let textMsg = '';
+        if (msg === 'troca de óleo') textMsg = 'Preciso de troca de óleo no meu carro. Qual valor e horário?';
+        else if (msg === 'suspensão') textMsg = 'Meu carro está com problema na suspensão. Gostaria de um diagnóstico.';
+        else if (msg === 'motor ou câmbio') textMsg = 'Estou com problema no motor/câmbio. Preciso de avaliação.';
+        else if (msg === 'freios e elétrica') textMsg = 'Quero revisar freios e sistema elétrico.';
+        else if (msg === 'orçamento') textMsg = 'Gostaria de um orçamento sem compromisso para meu veículo.';
+        else textMsg = `Preciso de ajuda com ${msg}`;
+        
+        window.open(`https://wa.me/5548999161977?text=${encodeURIComponent(textMsg)}`, '_blank');
+        chatContainer.style.display = 'none';
+      });
+    }
+  });
+
+  // Botão de horário - exibe informações internas sem WhatsApp
+  const horarioBtn = document.getElementById('horarioBtn');
+  horarioBtn.addEventListener('click', () => {
+    alert('🕗 HORÁRIO DE FUNCIONAMENTO\n\nSegunda a Sexta: 8h às 12h\n13h30 às 18h\n\nConfiança e transparência é o que nos define.\n\n📍 Rua Alina Alexandrina Mateus, 157 - Rio Maina, Criciúma');
+    chatContainer.style.display = 'none';
   });
 </script>
 </body>
